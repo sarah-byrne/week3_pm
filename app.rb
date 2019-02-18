@@ -1,6 +1,5 @@
 require 'sinatra'
 require 'shotgun'
-require 'erb'
 
 set :session_secret, 'super secret'
 
@@ -17,5 +16,5 @@ get '/third' do
 end
 
 get '/cat' do
-  send_file 'cat_image.html'
+  erb(:index)
 end
